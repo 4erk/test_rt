@@ -52,6 +52,7 @@ class QueueStatuses extends ActiveRecord
             [['s_name', 'c_name'], 'string', 'max' => 512],
             [['c_id', 'direction', 'activation', 'c_state', 'control'], 'string', 'max' => 32],
             [['a_type'], 'string', 'max' => 128],
+            [['c_name', 's_name', 'c_id', 'a_type', 'direction', 'activation', 'c_state', 'control'], 'required']
         ];
     }
 

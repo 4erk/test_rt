@@ -14,14 +14,14 @@ class m220428_103513_create_queue_statuses_table extends Migration
     {
         $this->createTable('{{%queue_statuses}}', [
             'id'         => $this->bigPrimaryKey(),
-            's_name'     => $this->string(512),
-            'c_name'     => $this->string(512),
-            'c_id'       => $this->string(32),
-            'a_type'     => $this->string(128),
-            'direction'  => $this->string(32),
-            'activation' => $this->string(32),
-            'c_state'    => $this->string(32),
-            'control'    => $this->string(32),
+            's_name'     => $this->string(512)->notNull(),
+            'c_name'     => $this->string(512)->notNull(),
+            'c_id'       => $this->string(32)->notNull(),
+            'a_type'     => $this->string(128)->notNull(),
+            'direction'  => $this->string(32)->notNull(),
+            'activation' => $this->string(32)->notNull(),
+            'c_state'    => $this->string(32)->notNull(),
+            'control'    => $this->string(32)->notNull(),
             'created_at' => $this->bigInteger(),
         ]);
     }
